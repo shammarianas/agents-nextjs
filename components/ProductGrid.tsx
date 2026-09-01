@@ -10,7 +10,7 @@ export default function ProductGrid({
   query?: string;
 }) {
   return (
-    <section id="products" className="py-20">
+    <section id="products" className="py-20 bg-surface">
       <div className="wrap">
         <Reveal>
           <div className="flex justify-between items-end mb-10 gap-5 flex-wrap">

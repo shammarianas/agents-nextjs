@@ -35,9 +35,9 @@ export default function HomePage({
       <Hero />
       <ProductGrid products={filtered} query={searchParams.q} />
       <Integrations />
-      <HowWeWork />
       <ProcessLayers />
       <FaqSection />
+      <HowWeWork />
     </main>
   );
 }

@@ -9,7 +9,7 @@ export default function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-[#0f1420] text-white border-t border-white/10">
+    <section className="py-24 text-black border-t border-black/10">
       <div className="wrap max-w-3xl">
         <Reveal>
           <span className="text-accent2 text-xs font-semibold tracking-wide uppercase block mb-3">
@@ -21,11 +21,11 @@ export default function FaqSection() {
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="border-t border-white/10">
+          <div className="border-t border-black/10">
             {FAQS.map((item, i) => {
               const isOpen = open === i;
               return (
-                <div key={item.q} className="border-b border-white/10">
+                <div key={item.q} className="border-b border-black/10">
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
@@ -50,7 +50,7 @@ export default function FaqSection() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-white/55 text-sm leading-relaxed max-w-xl">{item.a}</p>
+                      <p className="text-black/55 text-sm leading-relaxed max-w-xl">{item.a}</p>
                     </div>
                   </div>
                 </div>
@@ -65,11 +65,11 @@ export default function FaqSection() {
               href={SITE.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:opacity-90 transition"
+              className="inline-flex items-center justify-center bg-accent text-black font-semibold text-sm px-6 py-3.5 rounded-xl hover:opacity-90 transition"
             >
               Book a call
             </a>
-            <span className="text-white/45 text-sm">
+            <span className="text-black/45 text-sm">
               Free 45-min AI strategy review — no obligation
             </span>
           </div>
