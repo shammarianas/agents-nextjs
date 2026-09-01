@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: theme("colors.bg");
+  color: theme("colors.text");
+}
+
+@layer components {
+  .wrap {
+    @apply max-w-site mx-auto px-6;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:opacity-90 transition;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center bg-transparent text-text font-semibold text-sm px-6 py-3.5 rounded-xl border border-border hover:border-accent transition;
+  }
+
+  .card {
+    @apply bg-bg border border-border rounded-card overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-accent transition-all duration-200;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase text-accent2 bg-accent2/10 border border-accent2/25 px-3 py-1.5 rounded-full;
+  }
+}
