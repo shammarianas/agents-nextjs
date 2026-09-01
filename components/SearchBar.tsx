@@ -32,7 +32,7 @@ export default function SearchBar() {
   }
 
   return (
-    <div className="hidden sm:block flex-1 max-w-[420px] mx-auto ml-8 relative">
+    <div className="flex-1 max-w-[420px] relative">
       <svg
         viewBox="0 0 24 24"
         fill="none"

@@ -20,7 +20,7 @@ export default function Integrations() {
         </Reveal>
 
         <Reveal delay={100}>
-          <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3.5">
+          <div className="flex flex-wrap gap-3.5">
             {TOOLS.map((tool, i) => (
               <div key={tool.slug} style={{ transitionDelay: `${i * 25}ms` }}>
                 <ToolLogo name={tool.name} slug={tool.slug} />

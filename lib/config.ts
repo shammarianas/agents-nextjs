@@ -3,10 +3,13 @@
 // robots.ts and every page's metadata all read from here.
 
 export const SITE = {
-  name: "Rovix",
-  url: "https://rovix.ai", // <-- replace with your real domain
+  name: "Agentix",
+  url: "https://agentixsystem.com",
   description:
-    "Rovix builds ready-to-deploy AI automation agents that handle outreach, support, data entry and reporting.",
+    "Agentix builds ready-to-deploy AI automation agents that handle outreach, support, operations, and reporting.",
   whatsapp: "https://wa.me/971528036012",
-  twitterHandle: "@rovix", // optional, remove usage in layout.tsx if not needed
+  phone: "+971 52 803 6012",
+  email: "info@agentixsystem.com",
+  address: "Dubai, United Arab Emirates",
+  twitterHandle: "@agentix",
 };

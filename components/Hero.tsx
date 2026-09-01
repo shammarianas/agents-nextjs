@@ -1,4 +1,4 @@
-import FlowDiagram from "@/components/FlowDiagram";
+import InquiryForm from "@/components/InquiryForm";
 import Reveal from "@/components/Reveal";
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={150}>
-            <FlowDiagram />
+            <InquiryForm />
           </Reveal>
         </div>
       </section>

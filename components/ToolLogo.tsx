@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export default function ToolLogo({ name, slug }: { name: string; slug: string }) {
   const [failed, setFailed] = useState(false);
@@ -16,14 +15,13 @@ export default function ToolLogo({ name, slug }: { name: string; slug: string })
           {name}
         </span>
       ) : (
-        <Image
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
           src={`https://cdn.simpleicons.org/${slug}`}
           alt={`${name} logo`}
-          width={40}
-          height={40}
-          className="object-contain w-full h-full"
+          loading="lazy"
+          className="w-full h-full object-contain"
           onError={() => setFailed(true)}
-          unoptimized
         />
       )}
     </div>
