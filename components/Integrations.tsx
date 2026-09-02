@@ -11,11 +11,10 @@ export default function Integrations() {
             Integrations
           </span>
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] max-w-xl mb-4 leading-tight">
-            Your tools stay. The manual work disappears.
+            Connect Your Tools. Automate the Work.
           </h2>
           <p className="text-textDim max-w-lg mb-10">
-            We build into whatever your team already uses — from everyday apps
-            to complex enterprise systems. If it has an API, we can connect it.
+            Bring your business apps, platforms, and systems together with AI-powered automation. Our AI agents connect with the tools your team already uses, trigger actions, move data, update records, and complete repetitive tasks automatically.
           </p>
         </Reveal>
 

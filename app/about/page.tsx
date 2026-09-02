@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 
 const VALUES = [
   {
-    title: "Built for real workflows",
-    body: "We don't ship generic chatbots. Every agent is built around the specific way your team already works.",
+    title: "Built Around Your Workflow",
+    body: "No one-size-fits-all automation. Every AI agent is designed around your specific processes, goals, systems, and business requirements.",
   },
   {
-    title: "Reliability over hype",
-    body: "Guardrails, audit trails, and human approval steps come standard — not as an afterthought.",
+    title: "Reliability Comes First",
+    body: "Smart is good. Dependable is better. Our AI agents work with clear rules, guardrails, monitoring, and human approval where important decisions require oversight.",
   },
   {
-    title: "You keep ownership",
-    body: "Everything we build runs inside your own stack and stays yours, not locked into a platform.",
+    title: "Your Systems. Your Data. Your Ownership.",
+    body: "AI should work for you, not lock you in. Your automation connects with the tools and systems you already use, giving your business control over its workflows, data, and AI-powered operations.",
   },
 ];
 
@@ -34,14 +34,14 @@ export default function AboutPage() {
               About {SITE.name}
             </span>
             <h1 className="font-display font-bold text-[clamp(2rem,4vw,3rem)] leading-[1.1] tracking-tight mb-6">
-              We build the automation layer teams actually trust.
+             AI Automation Built for the Work Behind Your Business.
             </h1>
             <p className="text-textDim text-[1.05rem] max-w-[520px]">
-              {SITE.name} started with a simple observation: most teams don&apos;t
-              need another dashboard or another chatbot. They need the repetitive,
-              rule-based parts of their job to just happen — reliably, with a
-              human still in the loop wherever it matters. That&apos;s the only
-              thing we build.
+               Every business has work that keeps getting repeated: updating systems, processing information, managing requests, following up, generating reports, and moving data between tools.
+               <br></br>  <br></br>
+{SITE.name} turns those repetitive processes into intelligent AI-powered workflows. Our agents connect with the systems you already use, follow defined rules, and automate tasks while keeping your team in control when human judgment is needed.
+<br></br> <br></br>
+We don't build AI for the sake of AI. We build it to make work happen.
             </p>
           </Reveal>
 

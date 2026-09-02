@@ -10,12 +10,10 @@ export default function ProcessLayers() {
             Built for reliability
           </span>
           <h2 className="font-display text-[clamp(1.8rem,3vw,2.4rem)] max-w-2xl mb-4 leading-tight">
-            This isn&apos;t a chatbot. It&apos;s a governed automation layer.
+            Let AI act. Keep Your Business in Control. 
           </h2>
           <p className="text-white/55 max-w-xl mb-14">
-            The most common concern we hear is &ldquo;what if the AI gets it
-            wrong?&rdquo; That&apos;s the right question — here&apos;s why the
-            architecture makes it reliable in practice.
+            AI automation should not mean giving up control. Our AI agents work within defined rules, business logic, and approval controls, so every decision and action follows your requirements.
           </p>
         </Reveal>
 

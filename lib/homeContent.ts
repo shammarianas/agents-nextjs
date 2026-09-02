@@ -27,76 +27,80 @@ export const TOOLS = [
 export const HOW_WE_WORK = [
   {
     icon: "lock",
-    title: "Your data stays yours",
-    body: "Agents run on top of your existing infrastructure. We never store or train on your business data.",
+    title: "Understand Your Workflow",
+    body: "We identify repetitive tasks, business processes, and opportunities where AI automation can create the most impact.",
   },
   {
     icon: "doc",
-    title: "Full audit trail",
-    body: "Every action is logged. See exactly what ran, when, and why — any time you need to check.",
+    title: "Build Your AI Automation",
+    body: "We design and configure an AI automation around your workflow, business rules, tools, and automation requirements.",
   },
   {
     icon: "check",
-    title: "You stay in control",
-    body: "Human approval is built in for anything consequential. The agent handles the routine.",
+    title: "Connect & Automate",
+    body: "Your AI agent connects with your existing apps, APIs, CRM, and business systems to execute tasks automatically.",
   },
   {
     icon: "plug",
-    title: "No new tools required",
-    body: "We build into the stack you already run. If it has an API, we can connect it — no rip and replace.",
+    title: "Launch, Monitor & Improve",
+    body: "Once live, we monitor performance, review results, and continuously improve your AI automation as your business grows.",
   },
 ];
 
 export const PROCESS_LAYERS = [
   {
     number: "01",
-    title: "Reasoning layer",
-    body: "Reads context, classifies intent, and decides what needs to happen next.",
+    title: "Understand",
+    body: "AI reads the context, identifies the intent, and understands what needs to happen.",
   },
   {
     number: "02",
-    title: "Rules and guardrails layer",
-    body: "Every action is checked against policies you define before it's allowed to run.",
+    title: "Decide Safely",
+    body: "Business rules and guardrails determine what the agent can and cannot do.",
   },
   {
     number: "03",
-    title: "Deterministic integration layer",
-    body: "Executes through your real APIs and systems — never a guess at what an interface looks like.",
+    title: "Execute",
+    body: "The agent carries out approved actions across your apps, APIs, and business systems.",
   },
   {
     number: "04",
-    title: "Audit and oversight layer",
-    body: "Every action is logged, reversible, and reviewable any time something needs a second look.",
+    title: "Stay Accountable",
+    body: "Every important action is tracked, reviewable, and easy to monitor.",
   },
 ];
 
 export const FAQS = [
   {
-    q: "What if the agent makes a mistake?",
-    a: "High-stakes actions always require human confirmation — the agent pauses and waits rather than proceeding when confidence is below a set threshold. Every action is logged, so anything unusual is caught early.",
+    q: "What can be automated in our business?",
+    a: "You can automate repetitive tasks such as lead qualification, customer support, appointment scheduling, data entry, follow-ups, reporting, outreach, and internal workflows. AI agents can connect these tasks into smart, multi-step business processes.",
   },
   {
-    q: "Who has access to our data?",
-    a: "Only the systems the agent needs to complete its task, scoped by permission. You control exactly what it can see and what it can do at every step.",
+    q: "What if the system makes a mistake?",
+    a: "Your automation can include rules, approval steps, validation, and human oversight for important decisions. This helps reduce errors while keeping your team in control of critical business processes.",
   },
   {
-    q: "How long until the first automation is live?",
-    a: "Most teams see a first working agent within one to two weeks, depending on how many systems it needs to connect to.",
+    q: "Will it work with the tools we already use?",
+    a: "Yes. AI automation can be connected with your existing CRM, website, databases, communication platforms, and other business software, allowing your workflows to run without completely changing the tools your team already knows.",
   },
   {
-    q: "Do we need technical staff to run this?",
-    a: "No. We handle the setup and integration work. Your team reviews and approves — no code or maintenance required on your side.",
+    q: "Can it work while our team is offline?",
+    a: "Yes. Automated workflows can continue running outside working hours, handling defined tasks, processing information, sending follow-ups, and responding to routine requests without requiring someone to be available every minute.",
   },
   {
-    q: "What happens when our tools or processes change?",
-    a: "Agents are built to be updated, not rebuilt. We adjust the rules and integrations as your stack or workflow evolves.",
+    q: "How quickly can we get started?",
+    a: "The timeline depends on the complexity of your workflow, integrations, and customization requirements. Simple automations can be launched faster, while larger AI agent systems may require additional development, testing, and optimization.",
   },
   {
-    q: "What happens after the engagement ends?",
-    a: "The agents and everything they touch stay fully yours, running inside your own infrastructure with documentation handed over.",
+    q: "What happens when our workflow changes?",
+    a: "Your automation can be updated as your business processes, tools, or requirements change. AI agent workflows are designed to be flexible, allowing new steps, integrations, rules, and tasks to be added when your business evolves.",
   },
   {
-    q: "Is this the same as the AI tools we've already tried?",
-    a: "Most off-the-shelf AI tools guess at actions through a chat interface. This is built for your specific workflow, with guardrails, audit logs, and real integrations — not a chatbot layered on top.",
+    q: "Can it be customized for our business?",
+    a: "Yes. AI automation can be customized around your goals, industry, workflows, customers, and existing technology. Whether you need sales automation, customer support, lead management, or internal operations, the system can be built around your specific requirements.",
+  },
+   {
+    q: "Can it connect with our CRM and other business tools?",
+    a: "Yes. AI agents can work with compatible CRMs, websites, databases, communication platforms, and business applications to move information between systems and automate multi-step workflows.",
   },
 ];

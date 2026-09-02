@@ -9,17 +9,15 @@ export default function Hero() {
           <Reveal>
             <div className="eyebrow mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-accent2 animate-pulse2" />
-              Now supporting multi-step workflows
+              NOW SUPPORTING END-TO-END AUTOMATION
             </div>
             <h1 className="font-display font-bold text-[clamp(2.2rem,4.2vw,3.6rem)] leading-[1.05] tracking-tight mb-6">
-              AI automation
+              Turn your business
               <br />
-              <span className="text-accent">agents</span> that run your busywork.
+              <span className="text-accent">processes</span> into intelligent systems.
             </h1>
             <p className="text-textDim text-[1.08rem] max-w-[480px] mb-9">
-              Rovix builds ready-to-deploy AI agents that handle outreach, support,
-              data entry and reporting — so your team can focus on the work that
-              actually needs a human.
+              We develop customized AI automation systems that integrate with your existing business infrastructure to intelligently execute workflows, manage operations, engage customers, and keep your business running 24/7, with minimal human intervention.
             </p>
             <div className="flex gap-3.5 flex-wrap">
               <a href="#products" className="btn-primary">
