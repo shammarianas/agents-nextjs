@@ -4,9 +4,26 @@ import Reveal from "@/components/Reveal";
 import { SITE } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: `Learn what ${SITE.name} does, how we build AI automation agents, and why teams trust us to handle their operational workflows.`,
-  alternates: { canonical: "/about" },
+  title: `About ${SITE.name} | AI Automation Agents for Business`,
+  description: `${SITE.name} System has helped businesses turn repetitive tasks into intelligent AI workflows. Discover how we build reliable, custom automation agents that keep your team in control.`,
+  alternates: { 
+    canonical: `${SITE.url}/about` 
+  },
+  keywords: [
+    "About Agentix system",
+    "AI automation company",
+    "AI agents for business",
+    "custom workflow automation",
+    "AI automation Dubai",
+    "reliable AI agents"
+  ],
+  openGraph: {
+    title: `About ${SITE.name} | AI Automation Agents for Business`,
+    description: `${SITE.name} System has helped businesses turn repetitive tasks into intelligent AI workflows.`,
+    url: `${SITE.url}/about`,
+    siteName: SITE.name,
+    type: "website",
+  },
 };
 
 const VALUES = [
@@ -34,14 +51,14 @@ export default function AboutPage() {
               About {SITE.name}
             </span>
             <h1 className="font-display font-bold text-[clamp(2rem,4vw,3rem)] leading-[1.1] tracking-tight mb-6">
-             AI Automation Built for the Work Behind Your Business.
+              AI Automation Built for the Work Behind Your Business.
             </h1>
             <p className="text-textDim text-[1.05rem] max-w-[520px]">
-               Every business has work that keeps getting repeated: updating systems, processing information, managing requests, following up, generating reports, and moving data between tools.
-               <br></br>  <br></br>
-{SITE.name} turns those repetitive processes into intelligent AI-powered workflows. Our agents connect with the systems you already use, follow defined rules, and automate tasks while keeping your team in control when human judgment is needed.
-<br></br> <br></br>
-We don't build AI for the sake of AI. We build it to make work happen.
+              Every business has work that keeps getting repeated: updating systems, processing information, managing requests, following up, generating reports, and moving data between tools.
+              <br /><br />
+              {SITE.name} turns those repetitive processes into intelligent AI-powered workflows. Our agents connect with the systems you already use, follow defined rules, and automate tasks while keeping your team in control when human judgment is needed.
+              <br /><br />
+              We don't build AI for the sake of AI. We build it to make work happen.
             </p>
           </Reveal>
 
@@ -49,7 +66,7 @@ We don't build AI for the sake of AI. We build it to make work happen.
             <div className="relative h-[320px] rounded-2xl overflow-hidden border border-border">
               <Image
                 src="https://picsum.photos/seed/rovix-about/800/600"
-                alt="Rovix team working on an automation workflow"
+                alt={`${SITE.name} team working on an automation workflow`}
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
