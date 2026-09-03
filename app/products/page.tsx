@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ProductsPage({
   searchParams,
 }: {
-  searchParams: { q?: string };
+  searchParams: { q?: string; page?: string };
 }) {
   const query = (searchParams.q ?? "").trim().toLowerCase();
 
@@ -25,6 +25,24 @@ export default function ProductsPage({
           p.tagline.toLowerCase().includes(query)
       )
     : PRODUCTS;
+
+  const pageSize = 10;
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+  const requestedPage = Number.parseInt(searchParams.page ?? "1", 10);
+  const currentPage = Number.isNaN(requestedPage)
+    ? 1
+    : Math.min(Math.max(requestedPage, 1), totalPages);
+  const paginatedProducts = filtered.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
+
+  const pageHref = (page: number) => {
+    const params = new URLSearchParams();
+    if (searchParams.q) params.set("q", searchParams.q);
+    params.set("page", String(page));
+    return `/products?${params.toString()}`;
+  };
 
   return (
     <main>
@@ -44,7 +62,33 @@ export default function ProductsPage({
         </div>
       </section>
 
-      <ProductGrid products={filtered} query={searchParams.q} />
+      <ProductGrid
+        products={paginatedProducts}
+        query={searchParams.q}
+        showHeading={false}
+      />
+      {totalPages > 1 && (
+        <nav className="bg-surface pb-20" aria-label="Product pages">
+          <div className="wrap flex items-center justify-center gap-2">
+            {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+              (page) => (
+                <a
+                  key={page}
+                  href={pageHref(page)}
+                  aria-current={page === currentPage ? "page" : undefined}
+                  className={`flex h-10 min-w-10 items-center justify-center rounded-full border px-3 text-sm font-semibold transition-colors ${
+                    page === currentPage
+                      ? "border-accent bg-accent text-white"
+                      : "border-line hover:border-accent hover:text-accent"
+                  }`}
+                >
+                  {page}
+                </a>
+              )
+            )}
+          </div>
+        </nav>
+      )}
     </main>
   );
 }

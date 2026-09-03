@@ -41,7 +41,15 @@ export default function HomePage({
   return (
     <main>
       <Hero />
-      <ProductGrid products={filtered} query={searchParams.q} />
+      <ProductGrid products={filtered.slice(0, 6)} query={searchParams.q} />
+      <div className="bg-surface pb-20 text-center">
+        <a
+          href="/products"
+          className="inline-flex items-center justify-center rounded-full border border-line px-5 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
+        >
+          View all agents
+        </a>
+      </div>
       <Integrations />
       <ProcessLayers />
       <FaqSection />

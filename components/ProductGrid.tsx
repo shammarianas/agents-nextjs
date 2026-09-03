@@ -5,26 +5,30 @@ import Reveal from "@/components/Reveal";
 export default function ProductGrid({
   products,
   query,
+  showHeading = true,
 }: {
   products: Product[];
   query?: string;
+  showHeading?: boolean;
 }) {
   return (
     <section id="products" className="py-20 bg-surface">
       <div className="wrap">
-        <Reveal>
-          <div className="flex justify-between items-end mb-10 gap-5 flex-wrap">
-            {/* <div>
-              <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.2rem)] tracking-tight">
-                Choose your Solution
-              </h2>
-              <p className="text-textDim max-w-[420px] text-[0.95rem]">
-                Every agent is built for one job and does it well. Click any card to
-                see exactly what it does.
-              </p>
-            </div> */}
-          </div>
-        </Reveal>
+        {showHeading && (
+          <Reveal>
+            <div className="flex justify-between items-end mb-10 gap-5 flex-wrap">
+              <div>
+                <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.2rem)] tracking-tight">
+                  Choose your Solution
+                </h2>
+                <p className="text-textDim max-w-[420px] text-[0.95rem]">
+                  Every agent is built for one job and does it well. Click any card to
+                  see exactly what it does.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        )}
 
         {products.length ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
