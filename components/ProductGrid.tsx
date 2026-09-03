@@ -14,7 +14,7 @@ export default function ProductGrid({
       <div className="wrap">
         <Reveal>
           <div className="flex justify-between items-end mb-10 gap-5 flex-wrap">
-            <div>
+            {/* <div>
               <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.2rem)] tracking-tight">
                 Choose your Solution
               </h2>
@@ -22,7 +22,7 @@ export default function ProductGrid({
                 Every agent is built for one job and does it well. Click any card to
                 see exactly what it does.
               </p>
-            </div>
+            </div> */}
           </div>
         </Reveal>
 

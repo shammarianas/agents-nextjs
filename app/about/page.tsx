@@ -5,7 +5,7 @@ import { SITE } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: `About ${SITE.name} | AI Automation Agents for Business`,
-  description: `${SITE.name} System has helped businesses turn repetitive tasks into intelligent AI workflows. Discover how we build reliable, custom automation agents that keep your team in control.`,
+  description: `${SITE.name} has helped businesses turn repetitive tasks into intelligent AI workflows. Discover how we build reliable, custom automation agents that keep your team in control.`,
   alternates: { 
     canonical: `${SITE.url}/about` 
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: `About ${SITE.name} | AI Automation Agents for Business`,
-    description: `${SITE.name} System has helped businesses turn repetitive tasks into intelligent AI workflows.`,
+    description: `${SITE.name} has helped businesses turn repetitive tasks into intelligent AI workflows.`,
     url: `${SITE.url}/about`,
     siteName: SITE.name,
     type: "website",
@@ -65,7 +65,7 @@ export default function AboutPage() {
           <Reveal delay={150}>
             <div className="relative h-[320px] rounded-2xl overflow-hidden border border-border">
               <Image
-                src="https://picsum.photos/seed/rovix-about/800/600"
+                src="/assets/about.png"
                 alt={`${SITE.name} team working on an automation workflow`}
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
@@ -107,30 +107,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="pb-24">
-        <div className="wrap">
-          <Reveal>
-            <div className="bg-[#0f1420] text-white rounded-2xl p-10 sm:p-14 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div>
-                <h2 className="font-display text-2xl mb-2">
-                  Want to see if this fits your team?
-                </h2>
-                <p className="text-white/55 text-sm">
-                  A free 45-minute strategy review, no obligation.
-                </p>
-              </div>
-              <a
-                href={SITE.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:opacity-90 transition whitespace-nowrap"
-              >
-                Book a call
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      
     </main>
   );
 }

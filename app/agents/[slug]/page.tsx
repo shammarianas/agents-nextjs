@@ -152,7 +152,7 @@ export default function ProductPage({ params }: Props) {
             rel="noopener noreferrer"
             className="block w-full mt-5 bg-accent text-white text-center font-semibold text-[0.92rem] py-3.5 rounded-xl hover:opacity-90 transition"
           >
-            Book a demo
+            Get a Consultation
           </a>
         </aside>
       </div>

@@ -34,7 +34,9 @@ export default function Hero() {
               <a href="#products" className="btn-primary">
                 Browse agents
               </a>
-              <button className="btn-ghost">See how it works</button>
+              <a href="https://www.instagram.com/agentix.system/" className="btn-ghost">
+                See how it works
+              </a>
             </div>
           </Reveal>
 

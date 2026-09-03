@@ -9,12 +9,12 @@ import { PRODUCTS } from "@/lib/products";
 import { SITE } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: `AI Automation Agents for Sales, Support & Operations | ${SITE.name} System`,
+  title: `AI Automation Agents for Sales, Support & Operations | ${SITE.name}`,
   description: SITE.description,
   alternates: { canonical: "/" },
   keywords: SITE.keywords,
   openGraph: {
-    title: `AI Automation Agents for Sales, Support & Operations | ${SITE.name} System`,
+    title: `AI Automation Agents for Sales, Support & Operations | ${SITE.name}`,
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,

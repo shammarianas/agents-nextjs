@@ -3,7 +3,7 @@
 // robots.ts and every page's metadata all read from here.
 
 export const SITE = {
-  name: "Agentix",
+  name: "AI Agentix System",
   url: "https://agentixsystem.com",
   description:
     "Agentix builds custom AI automation agents for sales, support, marketing, and operations. Automate repetitive workflows, connect your business tools, and run tasks 24/7.",

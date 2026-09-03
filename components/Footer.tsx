@@ -61,15 +61,8 @@ export default function Footer() {
           <div className="flex items-center gap-2 font-display font-bold text-xl tracking-tight mb-4">
             <img src="/assets/Logo.png" alt={SITE.name} className="h-8 w-auto object-contain" />
           </div>
-          <p className="text-white/50 text-sm max-w-[280px] mb-6">{SITE.description}</p>
-          <a
-            href={SITE.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:opacity-90 transition"
-          >
-            Book a demo
-          </a>
+          <p className="text-white/50 text-sm max-w-[280px] mb-6">Agentix System is a Dubai-based AI solutions company specializing in custom AI automation and Agentic AI systems. We help businesses automate workflows, connect their tools, and build intelligent systems that work with minimal human intervention.</p>
+          
         </div>
 
         <div>
@@ -104,7 +97,7 @@ export default function Footer() {
               <Link href="/products" className="text-white/50 text-sm hover:text-white transition-colors">Products</Link>
             </li>
             <li>
-              <Link href="/terms" className="text-white/50 text-sm hover:text-white transition-colors">Term &amp; Conditions</Link>
+              <Link href="/terms" className="text-white/50 text-sm hover:text-white transition-colors">Terms &amp; Conditions</Link>
             </li>
             <li>
               <Link href="/policy" className="text-white/50 text-sm hover:text-white transition-colors">Privacy Policy</Link>
@@ -135,6 +128,43 @@ export default function Footer() {
               Subscribe
             </button>
           </form>
+          <div className="flex items-center gap-4 mt-5" aria-label="Social media links">
+            <a
+              href="https://www.instagram.com/agentix.system/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="p-[5px] rounded-[50px] border border-accent text-accent hover:text-white transition-colors hover:scale-110 hover:border-white"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-5 w-5">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/agentix.system/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="p-[5px] rounded-[50px] border border-accent text-accent hover:text-white transition-colors hover:scale-110 hover:border-white"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                <path d="M13.5 21v-8h2.75l.42-3h-3.17V8.08c0-.87.24-1.46 1.5-1.46h1.8V3.94c-.31-.04-1.38-.14-2.63-.14-2.6 0-4.38 1.59-4.38 4.51V10H7v3h2.79v8h3.71Z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@agentixsystem"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="p-[5px] rounded-[50px] border border-accent text-accent hover:text-white transition-colors hover:scale-110 hover:border-white"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                <path d="M21.58 7.19a2.75 2.75 0 0 0-1.94-1.95C17.93 4.75 12 4.75 12 4.75s-5.93 0-7.64.49a2.75 2.75 0 0 0-1.94 1.95C1.93 8.91 1.93 12 1.93 12s0 3.09.49 4.81a2.75 2.75 0 0 0 1.94 1.95c1.71.49 7.64.49 7.64.49s5.93 0 7.64-.49a2.75 2.75 0 0 0 1.94-1.95c.49-1.72.49-4.81.49-4.81s0-3.09-.49-4.81ZM10 15.25v-6.5L15.5 12 10 15.25Z" />
+              </svg>
+            </a>
+          </div>
           {isSubmitted && (
             <p className="mt-3 text-xs text-emerald-300" aria-live="polite">
               Thanks for subscribing.
@@ -144,27 +174,11 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="wrap py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="wrap py-6 flex justify-center items-center">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} AI {SITE.name} System. Powered by Sham Marianas.
+            © {new Date().getFullYear()} {SITE.name}. Powered by Sham Marianas.
           </p>
-          <div className="flex items-center gap-5">
-            <a href="#" aria-label="LinkedIn" className="text-white/40 hover:text-white transition-colors">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
-              </svg>
-            </a>
-            <a href="#" aria-label="X (Twitter)" className="text-white/40 hover:text-white transition-colors">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                <path d="M18.9 2.5h3.3l-7.2 8.2 8.5 11.3h-6.6l-5.2-6.8-5.9 6.8H2.5l7.7-8.8L2 2.5h6.8l4.7 6.2 5.4-6.2zm-1.2 17.6h1.8L7.4 4.3H5.5l12.2 15.8z" />
-              </svg>
-            </a>
-            <a href="#" aria-label="GitHub" className="text-white/40 hover:text-white transition-colors">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
-              </svg>
-            </a>
-          </div>
+          
         </div>
       </div>
     </footer>
