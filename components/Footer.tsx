@@ -101,13 +101,13 @@ export default function Footer() {
               <Link href="/about" className="text-white/50 text-sm hover:text-white transition-colors">About</Link>
             </li>
             <li>
-              <Link href="/products" className="text-white/50 text-sm hover:text-white transition-colors">Product</Link>
+              <Link href="/products" className="text-white/50 text-sm hover:text-white transition-colors">Products</Link>
             </li>
             <li>
-              <Link href="/terms" className="text-white/50 text-sm hover:text-white transition-colors">Term &amp; Condition</Link>
+              <Link href="/terms" className="text-white/50 text-sm hover:text-white transition-colors">Term &amp; Conditions</Link>
             </li>
             <li>
-              <Link href="/policy" className="text-white/50 text-sm hover:text-white transition-colors">Policy</Link>
+              <Link href="/policy" className="text-white/50 text-sm hover:text-white transition-colors">Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -146,7 +146,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="wrap py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+            © {new Date().getFullYear()} AI {SITE.name} System. Powered by Sham Marianas.
           </p>
           <div className="flex items-center gap-5">
             <a href="#" aria-label="LinkedIn" className="text-white/40 hover:text-white transition-colors">

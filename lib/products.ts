@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
     tagline: "Logs every website inquiry, alerts your team, and confirms with the client automatically.",
     metaDescription:
       "An AI agent that saves every website inquiry to Google Sheets, notifies your team instantly, and sends the client a confirmation email, so no lead slips through the cracks.",
-    image: "/assets/inquiryForm.png",
+    image: "/assets/inquiryFormCard.png",
     cardImage: "/assets/inquiryFormCard.png",
     imageAlt: "Website Inquiry Form Agent dashboard showing logged leads and sent confirmations",
     // gallery: [
@@ -56,7 +56,7 @@ export const PRODUCTS: Product[] = [
       { title: "No Manual Work", description: "The entire process, from form to confirmation, runs on its own." },
       { title: "Boost Efficiency", description: "Your team focuses on responding, not on tracking down new messages." },
     ],
-    setup: "5 minutes",
+    setup: "3 days",
     integrations: "Google Sheets, Google Chat, Gmail",
   },
   {
@@ -86,7 +86,7 @@ export const PRODUCTS: Product[] = [
       { title: "No Manual Work", description: "The entire process, from form to confirmation, runs on its own." },
       { title: "Boost Efficiency", description: "Your team focuses on responding, not on tracking down new messages." },
     ],
-    setup: "5 minutes",
+    setup: "3 days",
     integrations: "Contact Us Form, Google Sheets, Google Chat, Gmail",
   },
 
@@ -120,7 +120,7 @@ export const PRODUCTS: Product[] = [
       { title: "More Qualified Leads", description: "Visitors get real answers upfront, so the ones who reach your team are already interested." },
       { title: "Less Repetitive Work", description: "Your team stops answering the same basic questions over and over." },
     ],
-    setup: "10 minutes",
+    setup: "3 days",
     integrations: "Pinecone, OpenAI, Google Sheets",
   },
 
@@ -160,7 +160,7 @@ export const PRODUCTS: Product[] = [
       { title: "Less Manual Front Desk Work", description: "Routine tasks like bookings, changes, and cancellations are handled without staff needing to step in, freeing your team to focus on guests who are actually on-site." },
       { title: "Consistent Guest Experience", description: "Because the agent remembers each guest's history, conversations feel continuous and personal instead of repetitive or robotic." },
     ],
-    setup: "12 minutes",
+    setup: "3 days",
     integrations: "WhatsApp, HubSpot, OpenAI, Google Sheets",
 },
 

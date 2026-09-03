@@ -16,7 +16,7 @@ export default function ProductGrid({
           <div className="flex justify-between items-end mb-10 gap-5 flex-wrap">
             <div>
               <h2 className="font-display text-[clamp(1.6rem,2.6vw,2.2rem)] tracking-tight">
-                Pick an agent, plug it in
+                Choose your Solution
               </h2>
               <p className="text-textDim max-w-[420px] text-[0.95rem]">
                 Every agent is built for one job and does it well. Click any card to

@@ -42,7 +42,7 @@ export default function Header() {
           rel="noopener noreferrer"
           className="hidden md:inline-block bg-accent text-white font-semibold text-sm px-5 py-2.5 rounded-xl whitespace-nowrap hover:opacity-90 transition shrink-0"
         >
-          Book a demo
+           Get a Consultation
         </a>
 
         <div className="ml-auto md:ml-0">

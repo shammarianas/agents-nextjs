@@ -255,7 +255,7 @@ export default function InquiryForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="123 4567"
+                  placeholder="12 345 6789"
                   className={`${inputClass} flex-1`}
                 />
               </div>

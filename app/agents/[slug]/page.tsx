@@ -91,8 +91,8 @@ export default function ProductPage({ params }: Props) {
       <h1 className="font-display text-[clamp(1.9rem,3.4vw,2.6rem)] mb-4">{product.name}</h1>
       <p className="text-textDim text-[1.05rem] max-w-[640px] mb-10">{product.lead}</p>
 
-      <div className="relative w-full h-[340px] rounded-[18px] border border-border overflow-hidden mb-9">
-        <Image src={product.image} alt={product.imageAlt} fill sizes="100vw" className="object-cover" priority />
+      <div className="relative w-full h-[100px] md:h-[490px] rounded-[18px] border border-border overflow-hidden mb-9">
+        <Image src={product.image} alt={product.imageAlt} fill sizes="100vw"  priority />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_0.9fr] gap-12 pb-20">

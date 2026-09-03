@@ -11,7 +11,6 @@ export default function ProductCard({ product }: { product: Product }) {
           alt={product.imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover"
         />
       </div>
       <div className="p-5 pb-6">

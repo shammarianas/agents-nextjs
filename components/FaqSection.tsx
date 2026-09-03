@@ -59,21 +59,21 @@ export default function FaqSection() {
           </div>
         </Reveal>
 
-        <Reveal delay={150}>
+        {/* <Reveal delay={150}>
           <div className="mt-10 flex items-center gap-4 flex-wrap">
             <a
               href={SITE.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-accent text-black font-semibold text-sm px-6 py-3.5 rounded-xl hover:opacity-90 transition"
+              className="inline-flex items-center justify-center bg-accent text-white font-semibold text-sm px-6 py-3.5 rounded-xl hover:opacity-90 transition"
             >
               Book a call
             </a>
             <span className="text-black/45 text-sm">
-              Free 45-min AI strategy review — no obligation
+              Free 45-min AI strategy review, no obligation
             </span>
           </div>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );
