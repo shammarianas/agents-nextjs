@@ -103,6 +103,21 @@ export default function ProductPage({ params }: Props) {
             </p>
           ))}
 
+          <h3 className="font-display text-xl mt-7 mb-3.5">Benefits</h3>
+          <ul className="list-none mb-4.5">
+            {product.benefits.map((b, i) => (
+              <li key={i} className="flex gap-2.5 items-start py-2.5 border-b border-border text-[0.92rem] text-[#3c4250]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-accent2 flex-shrink-0 mt-0.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>
+                  <span className="font-semibold text-foreground">{b.title}</span>
+                  {b.description && <span className="text-[#3c4250]">: {b.description}</span>}
+                </span>
+              </li>
+            ))}
+          </ul>
+
           <h3 className="font-display text-xl mt-7 mb-3.5">What it does</h3>
           <ul className="list-none mb-4.5">
             {product.features.map((f, i) => (
@@ -114,14 +129,16 @@ export default function ProductPage({ params }: Props) {
               </li>
             ))}
           </ul>
+          
+        
 
-          <div className="grid grid-cols-2 gap-3 mt-7">
+          {/* <div className="grid grid-cols-2 gap-3 mt-7">
             {product.gallery.map((img, i) => (
               <div key={i} className="relative h-[130px] rounded-xl border border-border overflow-hidden">
                 <Image src={img.src} alt={img.alt} fill sizes="50vw" className="object-cover" />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <aside className="bg-surface border border-border rounded-2xl p-6 h-fit lg:sticky lg:top-24">
