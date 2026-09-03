@@ -8,7 +8,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="relative h-[190px] w-full bg-surface2">
         <Image
           src={product.cardImage}
-          alt={prod uct.imageAlt}
+          alt={product.imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"
