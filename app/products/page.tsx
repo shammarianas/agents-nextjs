@@ -35,11 +35,10 @@ export default function ProductsPage({
               Products
             </span>
             <h1 className="font-display font-bold text-[clamp(2rem,4vw,3rem)] leading-[1.1] tracking-tight mb-4 max-w-2xl">
-              Every agent, ready to plug in.
+               Choose an AI agent. Put your automation on autopilot.
             </h1>
             <p className="text-textDim text-[1.05rem] max-w-[520px]">
-              Each one is built for a single job and does it well. Use the
-              search bar above, or browse the full list below.
+              Explore purpose-built AI automation designed to handle repetitive tasks, streamline business workflows, and help your team get more done. Pick the right automation, connect it to your workflow, and let intelligent automation take care of the busywork.
             </p>
           </Reveal>
         </div>

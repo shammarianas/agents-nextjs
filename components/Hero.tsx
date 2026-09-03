@@ -4,8 +4,19 @@ import Reveal from "@/components/Reveal";
 export default function Hero() {
   return (
     <>
-      <section className="pt-[90px] pb-[70px] overflow-hidden">
-        <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+      <section className="relative isolate pt-[90px] pb-[70px] overflow-hidden">
+        <video
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/assets/hero.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 -z-10" aria-hidden="true" />
+        <div className="wrap relative grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
           <Reveal>
             <div className="eyebrow mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-accent2 animate-pulse2" />

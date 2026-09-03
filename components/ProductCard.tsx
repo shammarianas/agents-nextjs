@@ -5,10 +5,10 @@ import type { Product } from "@/lib/products";
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link href={`/agents/${product.slug}`} className="card block">
-      <div className="relative h-[170px] w-full bg-surface2">
+      <div className="relative h-[190px] w-full bg-surface2">
         <Image
-          src={product.image}
-          alt={product.imageAlt}
+          src={product.cardImage}
+          alt={prod uct.imageAlt}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"

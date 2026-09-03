@@ -76,7 +76,7 @@ export default function ProductPage({ params }: Props) {
       />
 
       <Link
-        href="/"
+        href="/products"
         className="inline-flex items-center gap-1.5 text-textDim text-sm font-semibold my-9 hover:text-text transition"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">

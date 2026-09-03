@@ -26,7 +26,7 @@ body {
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center bg-transparent text-text font-semibold text-sm px-6 py-3.5 rounded-xl border border-border hover:border-accent transition;
+    @apply inline-flex items-center justify-center bg-[#ffffff5c] text-text font-semibold text-sm px-6 py-3.5 rounded-xl border border-accent transition;
   }
 
   .card {

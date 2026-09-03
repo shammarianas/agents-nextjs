@@ -9,7 +9,7 @@ type Country = {
   iso: string;
 };
 
-// ISO2 code se flag emoji banane ka helper (regional indicator symbols)
+// ISO2 code se flag emoji banane ka helper
 function isoToFlag(iso: string) {
   if (!iso || iso.length !== 2) return "";
   return String.fromCodePoint(
@@ -20,7 +20,7 @@ function isoToFlag(iso: string) {
   );
 }
 
-// reliable fallback agar CDN fetch fail ho jaye (no internet / blocked)
+// Fallback countries list
 const FALLBACK_COUNTRIES: Country[] = [
   { name: "UAE", code: "+971", flag: "🇦🇪", iso: "AE" },
   { name: "Saudi Arabia", code: "+966", flag: "🇸🇦", iso: "SA" },
@@ -41,14 +41,7 @@ const FALLBACK_COUNTRIES: Country[] = [
   { name: "Australia", code: "+61", flag: "🇦🇺", iso: "AU" },
 ];
 
-const SERVICE_OPTIONS = [
-  "AI Chatbot & Support Automation",
-  "Outreach & Lead Generation",
-  "Data Entry Automation",
-  "Reporting & Analytics Agent",
-  "Custom Workflow Automation",
-  "Other",
-];
+const SERVICE_OPTIONS = ["Workflow", "AI Automation", "Ajentic AI"];
 
 const BUDGET_OPTIONS = [
   "$500 – $1,000",
@@ -59,17 +52,31 @@ const BUDGET_OPTIONS = [
   "Not sure yet",
 ];
 
+const WEBHOOK_URL =
+  "https://n8n-z5va.srv1917294.hstgr.cloud/webhook/agentix-system";
+
 export default function InquiryForm() {
   const [countries, setCountries] = useState<Country[]>(FALLBACK_COUNTRIES);
   const [countryCode, setCountryCode] = useState("+971");
   const [loadingCountries, setLoadingCountries] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Form Fields State
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    service: "",
+    budget: "",
+    projectIdea: "",
+  });
 
   useEffect(() => {
     async function loadCountries() {
       try {
-        // world-countries dataset via jsdelivr CDN — restcountries.com se zyada reliable
         const res = await fetch(
           "https://cdn.jsdelivr.net/npm/world-countries@4/countries.json"
         );
@@ -80,7 +87,6 @@ export default function InquiryForm() {
           .map((c: any) => {
             const root = c?.idd?.root ?? "";
             const suffixes = c?.idd?.suffixes ?? [];
-            // agar multiple suffixes hain (jese US) to pehla le lo
             const dial = root
               ? `${root}${suffixes.length === 1 ? suffixes[0] : ""}`
               : "";
@@ -111,15 +117,48 @@ export default function InquiryForm() {
     loadCountries();
   }, []);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
+    setErrorMessage("");
 
-    // TODO: apna API call / email handler yahan lagayen
-    setTimeout(() => {
-      setSubmitting(false);
+    const payload = {
+      ...formData,
+      fullPhone: `${countryCode} ${formData.phone}`.trim(),
+      submittedAt: new Date().toISOString(),
+    };
+
+    try {
+      const response = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send data to webhook");
+      }
+
       setDone(true);
-    }, 900);
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      setErrorMessage(
+        "Something went wrong while submitting. Please try again."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   const inputClass =
@@ -128,7 +167,7 @@ export default function InquiryForm() {
   const labelClass = "block text-xs font-medium text-textDim mb-1.5";
 
   return (
-    <div className="relative rounded-2xl border border-border bg-white/[0.03] backdrop-blur-sm p-7 sm:p-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
+    <div className="relative rounded-2xl border border-border bg-[#ffffffe6] backdrop-blur-sm p-7 sm:p-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.35)]">
       <div className="absolute -top-3 -right-3 w-16 h-16 rounded-full bg-accent2/20 blur-2xl pointer-events-none" />
 
       <div className="eyebrow mb-4">
@@ -160,6 +199,9 @@ export default function InquiryForm() {
               <input
                 required
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your name"
                 className={inputClass}
               />
@@ -169,6 +211,9 @@ export default function InquiryForm() {
               <input
                 required
                 type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
                 placeholder="Your company"
                 className={inputClass}
               />
@@ -181,6 +226,9 @@ export default function InquiryForm() {
               <input
                 required
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="you@example.com"
                 className={inputClass}
               />
@@ -204,6 +252,9 @@ export default function InquiryForm() {
                 <input
                   required
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="123 4567"
                   className={`${inputClass} flex-1`}
                 />
@@ -214,7 +265,13 @@ export default function InquiryForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className={labelClass}>Service *</label>
-              <select required defaultValue="" className={`${inputClass} appearance-none`}>
+              <select
+                required
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className={`${inputClass} appearance-none`}
+              >
                 <option value="" disabled>
                   Please choose an option
                 </option>
@@ -228,7 +285,13 @@ export default function InquiryForm() {
 
             <div>
               <label className={labelClass}>Budget *</label>
-              <select required defaultValue="" className={`${inputClass} appearance-none`}>
+              <select
+                required
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
+                className={`${inputClass} appearance-none`}
+              >
                 <option value="" disabled>
                   Please choose an option
                 </option>
@@ -245,10 +308,17 @@ export default function InquiryForm() {
             <label className={labelClass}>Project Idea (optional)</label>
             <textarea
               rows={4}
+              name="projectIdea"
+              value={formData.projectIdea}
+              onChange={handleChange}
               placeholder="Share your idea, references, or goals..."
               className={`${inputClass} resize-none`}
             />
           </div>
+
+          {errorMessage && (
+            <p className="text-red-500 text-xs text-center">{errorMessage}</p>
+          )}
 
           <button
             type="submit"
