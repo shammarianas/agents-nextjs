@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
     metaDescription:
       "An AI agent that automates your website's Contact Us form: stores every message in Google Sheets, alerts your team instantly, and sends the client a confirmation, all without manual work.",
     image: "/assets/contactUsForm.png",
-    cardImage: "/assets/contactUsFormCard.png",
+    cardImage: "/assets/contactUsForm.png",
     imageAlt: "Contact Us Form Agent dashboard showing logged messages and sent confirmations",
 
     lead: "When a client submits a message through your Contact Us form, this agent takes over. It stores the message, alerts your team, and confirms with the client, automatically, in seconds.",
@@ -98,7 +98,7 @@ export const PRODUCTS: Product[] = [
     metaDescription:
       "An advanced AI assistant chatbot trained on your website data using RAG. It answers customer queries naturally, explains your services, shares your portfolio, and connects visitors with your team, all in human-like conversation.",
     image: "/assets/aiAssistant.png",
-    cardImage: "/assets/aiAssistantCard.png",
+    cardImage: "/assets/aiAssistant.png",
     imageAlt: "AI Website Assistant chatbot answering a visitor query in a human-like conversation",
 
     lead: "Most chatbots sound like chatbots: rigid, robotic, and useless the moment a question isn't in their script. This one is different. Built on RAG (Retrieval-Augmented Generation), it actually reads and understands your website content, so it answers like someone who works there, not a bot reading from a menu.",
@@ -132,7 +132,7 @@ export const PRODUCTS: Product[] = [
     metaDescription:
       "An AI concierge agent that talks to guests on WhatsApp, manages bookings, cancellations, and reminders, and automatically creates and updates contacts in your CRM. Built for hotels, resorts, and hospitality businesses.",
     image: "/assets/hospitalityConcierge.png",
-    cardImage: "/assets/hospitalityConciergeCard.png",
+    cardImage: "/assets/hospitalityConcierge.png",
     imageAlt: "Hospitality Booking Concierge chatting with a guest on WhatsApp about their booking",
 
     lead: "Guests don't want to call a front desk or fill out a form, they want to message on WhatsApp and get an answer right away. This agent acts as a full concierge: it checks availability, books rooms, handles cancellations, and keeps your CRM updated, all inside a single WhatsApp conversation.",
