@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="wrap flex justify-between flex-wrap gap-5">
             <Stat value="40+" label="ready-made agents" />
             <Stat value="120k" label="tasks automated / month" />
-            <Stat value="6 min" label="average setup time" />
+            <Stat value="3 days" label="average setup time" />
             <Stat value="99.2%" label="task accuracy" />
           </div>
         </Reveal>

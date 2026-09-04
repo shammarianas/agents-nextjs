@@ -8,7 +8,6 @@ import { SITE } from "@/lib/config";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
   { href: "/about", label: "About Us" },
 ];
