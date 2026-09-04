@@ -176,7 +176,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="wrap py-6 flex justify-center items-center">
           <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} {SITE.name}. Powered by Sham Marianas.
+            © {new Date().getFullYear()} {SITE.name}. Powered by <a href="https://www.shammarianas.com" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white">Sham Marianas FZC</a>.
           </p>
           
         </div>
