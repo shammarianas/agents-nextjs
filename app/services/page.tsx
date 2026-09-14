@@ -40,9 +40,27 @@ const PROCESS = [
   { step: "4", title: "Launch and support", body: "We monitor performance and adjust the agent as your workflow evolves." },
 ];
 
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: `${SITE.name} AI automation services`,
+  serviceType: "AI workflow automation",
+  provider: {
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.url,
+  },
+  areaServed: "Worldwide",
+  description: `${SITE.name} designs, builds, and maintains AI automation agents for sales, support, operations, and marketing teams.`,
+};
+
 export default function ServicesPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <section className="pt-20 pb-16">
         <div className="wrap">
           <Reveal>

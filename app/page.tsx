@@ -7,6 +7,7 @@ import ProcessLayers from "@/components/ProcessLayers";
 import FaqSection from "@/components/FaqSection";
 import { PRODUCTS } from "@/lib/products";
 import { SITE } from "@/lib/config";
+import { FAQS } from "@/lib/homeContent";
 
 export const metadata: Metadata = {
   title: `AI Automation Agents for Sales, Support & Operations | ${SITE.name}`,
@@ -20,6 +21,19 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     type: "website",
   },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
 };
 
 export default function HomePage({
@@ -40,6 +54,10 @@ export default function HomePage({
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Hero />
       <ProductGrid products={filtered.slice(0, 6)} query={searchParams.q} />
       <div className="bg-surface pb-20 text-center">

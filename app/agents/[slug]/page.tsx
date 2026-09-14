@@ -162,7 +162,7 @@ export default function ProductPage({ params }: Props) {
 
 function Row({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex justify-between py-2.5 border-b border-border text-[0.88rem]">
+    <div className="flex justify-between gap-2 py-2.5 border-b border-border text-[0.88rem]">
       <span className="text-textDim">{label}</span>
       <span>{value}</span>
     </div>

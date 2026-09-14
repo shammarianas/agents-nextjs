@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
   keywords: [
     "AI automation agents",
     "AI agents for business",
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [
       {
-        url: "https://picsum.photos/seed/rovix-og/1200/630",
+        url: "/assets/Logo.png",
         width: 1200,
         height: 630,
         alt: `${SITE.name} — AI Automation Agents`,
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — AI Automation Agents`,
     description: SITE.description,
-    images: ["https://picsum.photos/seed/rovix-og/1200/630"],
+    images: ["/assets/Logo.png"],
   },
   robots: {
     index: true,

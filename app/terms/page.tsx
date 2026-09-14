@@ -113,7 +113,7 @@ export default function TermsPage() {
               We only ever access what&apos;s needed to build and run your automation, nothing more. Your data is yours, we don&apos;t sell it, and we don&apos;t hand it off to third parties for marketing purposes. Anything you share with us during a consultation or project setup is used to deliver your service, full stop.
             </p>
             <p>
-              For the deeper details on how we handle information, check our <a href="/privacy" className="text-blue-500 hover:underline">Privacy Policy</a>.
+              For the deeper details on how we handle information, check our <a href="/policy" className="text-blue-500 hover:underline">Privacy Policy</a>.
             </p>
           </section>
 

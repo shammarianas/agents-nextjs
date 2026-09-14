@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
       { title: "Boost Efficiency", description: "Your team focuses on responding, not on tracking down new messages." },
     ],
     setup: "3 days",
-    integrations: "Google Sheets, Google Chat, Gmail",
+    integrations: " Google Sheets, Google Chat, Gmail",
   },
   {
     slug: "contact-us-form-agent",
@@ -87,7 +87,7 @@ export const PRODUCTS: Product[] = [
       { title: "Boost Efficiency", description: "Your team focuses on responding, not on tracking down new messages." },
     ],
     setup: "3 days",
-    integrations: "Contact Us Form, Google Sheets, Google Chat, Gmail",
+    integrations: " Contact Us Form, Google Sheets, Google Chat, Gmail",
   },
 
   {
@@ -121,7 +121,7 @@ export const PRODUCTS: Product[] = [
       { title: "Less Repetitive Work", description: "Your team stops answering the same basic questions over and over." },
     ],
     setup: "3 days",
-    integrations: "Pinecone, OpenAI, Google Sheets",
+    integrations: " Pinecone, OpenAI, Google Sheets",
   },
 
   {
@@ -161,7 +161,7 @@ export const PRODUCTS: Product[] = [
       { title: "Consistent Guest Experience", description: "Because the agent remembers each guest's history, conversations feel continuous and personal instead of repetitive or robotic." },
     ],
     setup: "3 days",
-    integrations: "WhatsApp, HubSpot, OpenAI, Google Sheets",
+    integrations: " WhatsApp, HubSpot, OpenAI, Google Sheets",
 },
 
 ];
