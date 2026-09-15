@@ -3,9 +3,9 @@ import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar";
 import MobileNav from "@/components/MobileNav";
 import { SITE } from "@/lib/config";
+import { PRODUCTS } from "@/lib/products";
 
 const NAV_LINKS = [
-  { href: "/products", label: "Products" },
   { href: "/about", label: "About Us" },
 ];
 
@@ -19,6 +19,45 @@ export default function Header() {
         </Link>
 
         <div className="hidden md:flex items-center gap-6 shrink-0">
+          <div className="relative group">
+            <button
+              type="button"
+              aria-haspopup="true"
+              className="flex items-center gap-1 text-sm font-medium text-textDim hover:text-text transition-colors"
+            >
+              Products
+              <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" className="h-3.5 w-3.5">
+                <path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <div className="invisible absolute left-0 top-full z-50 w-72 pt-3 opacity-0 transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div className="rounded-xl border border-border bg-white p-2 shadow-lg">
+                <Link
+                  href="/assistant"
+                  className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-text hover:bg-surface transition-colors"
+                >
+                  AI Avatar
+                  <span className="mt-0.5 block text-xs font-normal text-textDim">Talk with our live AI assistant</span>
+                </Link>
+                {/* <div className="my-1 border-t border-border" />
+                {PRODUCTS.map((product) => (
+                  <Link
+                    key={product.slug}
+                    href={`/agents/${product.slug}`}
+                    className="block rounded-lg px-3 py-2 text-sm text-textDim hover:bg-surface hover:text-text transition-colors"
+                  >
+                    {product.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/products"
+                  className="mt-1 block rounded-lg px-3 py-2 text-sm font-semibold text-accent hover:bg-surface transition-colors"
+                >
+                  View all products
+                </Link> */}
+              </div>
+            </div>
+          </div>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

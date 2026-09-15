@@ -5,10 +5,10 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 import { SITE } from "@/lib/config";
+import { PRODUCTS } from "@/lib/products";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
   { href: "/about", label: "About Us" },
 ];
 
@@ -43,6 +43,38 @@ export default function MobileNav() {
           </Suspense>
         </div>
 
+        <div
+          className={`border-b border-border transition-all duration-300 ${
+            open ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
+          }`}
+        >
+          <Link
+            href="/products"
+            onClick={() => setOpen(false)}
+            className="block py-3 text-lg font-display"
+          >
+            Products
+          </Link>
+          <div className="mb-3 ml-3 border-l border-border pl-3">
+            <Link
+              href="/assistant"
+              onClick={() => setOpen(false)}
+              className="block py-2 text-sm font-semibold text-accent"
+            >
+              AI Avatar
+            </Link>
+            {/* {PRODUCTS.map((product) => (
+              <Link
+                key={product.slug}
+                href={`/agents/${product.slug}`}
+                onClick={() => setOpen(false)}
+                className="block py-2 text-sm text-textDim"
+              >
+                {product.name}
+              </Link>
+            ))} */}
+          </div>
+        </div>
         {NAV_LINKS.map((link, i) => (
           <Link
             key={link.href}
@@ -51,7 +83,7 @@ export default function MobileNav() {
             className={`text-lg font-display py-3 border-b border-border transition-all duration-300 ${
               open ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4"
             }`}
-            style={{ transitionDelay: `${i * 60}ms` }}
+            style={{ transitionDelay: `${(i + 1) * 60}ms` }}
           >
             {link.label}
           </Link>
