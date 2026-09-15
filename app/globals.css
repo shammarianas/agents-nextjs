@@ -36,4 +36,39 @@ body {
   .eyebrow {
     @apply inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase text-accent2 bg-accent2/10 border border-accent2/25 px-3 py-1.5 rounded-full;
   }
+
+  .agent-marquee {
+    @apply overflow-hidden border-y border-border py-3;
+    mask-image: linear-gradient(to right, transparent, black 7%, black 93%, transparent);
+  }
+
+  .agent-marquee__track {
+    @apply flex w-max items-center;
+    animation: agent-marquee-scroll 32s linear infinite;
+  }
+
+  .agent-marquee__item {
+    @apply inline-flex items-center gap-3 px-5 text-xs font-semibold uppercase tracking-[0.14em] text-textDim whitespace-nowrap transition-colors hover:text-accent;
+    flex: 0 0 auto;
+  }
+
+  .agent-marquee__dot {
+    @apply h-1.5 w-1.5 rounded-full bg-accent;
+  }
+}
+
+@keyframes agent-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agent-marquee__track {
+    animation-play-state: paused;
+  }
 }

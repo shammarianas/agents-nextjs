@@ -42,7 +42,7 @@ const DEFAULTS = {
   documentIds: '',
   retrievalStrategy: 'balanced',
   customGreeting:
-    "Hi, I'm Aria, your AI assistant from Agentix System. We build custom AI automation agents for sales, support, and operations, and we partner with Sham Marianas for advertising, branding, and design. Ask me anything about our AI agents, integrations, or creative services.",
+    "Hi, I'm Aria, your AI assistant from Agentix System. We build custom AI automation agents for sales, support, and operations that keep your business running twenty-four seven. We also partner with Sham Marianas, a Dubai based creative agency for advertising, branding, and IT Solution. Ask me anything about our AI agents, Agentic system or Ai Automation.",
 };
 
 export function getServerConfig(): ServerConfig {

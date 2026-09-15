@@ -10,7 +10,7 @@ interface DefaultAgentIntroProps {
 }
 
 const INTRO_TEXT =
-  "Hi, I'm Aria, your AI assistant from Agentix System. We build custom AI automation agents for sales, support, and operations that keep your business running twenty-four seven. We also partner with Sham Marianas, a Dubai based creative agency for advertising, branding, and design. Ask me anything about our AI agents, integrations, or creative services.";
+  "Hi, I'm Aria, your AI assistant from Agentix System. We build custom AI automation agents for sales, support, and operations that keep your business running twenty-four seven. We also partner with Sham Marianas, a Dubai based creative agency for advertising, branding, and IT Solution. Ask me anything about our AI agents, Agentic system or Ai Automation.";
 
 const INTRO_VIDEO_SRC = '/videos/avatar-intro.mp4';
 
