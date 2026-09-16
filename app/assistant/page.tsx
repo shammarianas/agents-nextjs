@@ -199,7 +199,7 @@ export default function AssistantPage() {
     // NOTE: No <Header>, no <footer> here — main site's layout.tsx already
     // wraps every page with its own Header/Footer. This page only renders
     // the assistant section itself.
-    <section className="relative w-full py-10 sm:py-14">
+    <section className="relative w-full pt-10 sm:pt-14 pb-[7rem]">
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6">
         {/* Simple page intro — shown only before/after a call, not during */}
         {!isCallActive && conversationState !== 'error' && (
