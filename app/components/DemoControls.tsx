@@ -1,15 +1,7 @@
 'use client';
 
 import React from 'react';
-import {
-  PhoneOff,
-  PhoneCall,
-  Mic,
-  MicOff,
-} from 'lucide-react';
-import { Button } from './ui/Button';
 import { ConversationState } from '@/app/types';
-import { PRODUCTS } from '@/lib/products';
 
 interface DemoControlsProps {
   conversationState: ConversationState;
@@ -18,6 +10,24 @@ interface DemoControlsProps {
   onStartCall: () => void;
   onEndCall: () => void;
 }
+
+const agentImages = [
+  {
+    src: '/images/ChatGPT Image Sep 16, 2026, 01_14_15 PM.png',
+    alt: 'AI agent in a modern office',
+  },
+  {
+    src: '/images/ChatGPT Image Sep 16, 2026, 01_11_55 PM.png',
+    alt: 'AI agent in a modern office',
+  },
+  {
+    src: '/images/ChatGPT Image Sep 16, 2026, 01_07_28 PM.png',
+    alt: 'AI agent in a modern office',
+  },
+  { src: '/images/ee85c71d-0cc8-4274-a8a8-41dd15cf17fe.png', alt: 'AI agent' },
+  { src: '/images/ebdd4d9e-a685-42aa-99a4-04e406939c21.png', alt: 'AI agent' },
+  { src: '/images/aed1a569-4aa4-4516-a613-c201ebef2e5a.png', alt: 'AI agent' },
+];
 
 export const DemoControls: React.FC<DemoControlsProps> = ({
   conversationState,
@@ -36,7 +46,7 @@ export const DemoControls: React.FC<DemoControlsProps> = ({
     conversationState === 'initializing' || conversationState === 'requesting-permissions';
 
   return (
-    <div className="w-full space-y-4">
+    <div className="w-full space-y-4 pt-14">
       {/* Session Controls bar */}
       {/* <div className="card-glow rounded-2xl p-5 flex flex-wrap items-center justify-between gap-4">
         <div>
@@ -80,19 +90,16 @@ export const DemoControls: React.FC<DemoControlsProps> = ({
         </div>
       </div> */}
 
-      <div className="agent-marquee" aria-label="Available AI agents">
-        <div className="agent-marquee__track">
-          {[...PRODUCTS, ...PRODUCTS].map((product, index) => (
-            <a
-              key={`${product.slug}-${index}`}
-              href={`/agents/${product.slug}`}
-              className="agent-marquee__item"
-              aria-hidden={index >= PRODUCTS.length}
-              tabIndex={index >= PRODUCTS.length ? -1 : undefined}
-            >
-              <span className="agent-marquee__dot" aria-hidden="true" />
-              {product.name}
-            </a>
+      <div className="agent-images" aria-label="Available AI agents">
+        <div className="agent-images__track">
+          {[...agentImages, ...agentImages].map((image, index) => (
+            <img
+              key={`${image.src}-${index}`}
+              src={image.src}
+              alt={image.alt}
+              aria-hidden={index >= agentImages.length}
+              className="agent-images__item"
+            />
           ))}
         </div>
       </div>

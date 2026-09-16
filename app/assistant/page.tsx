@@ -274,7 +274,7 @@ export default function AssistantPage() {
           />
         </div>
 
-        <section id="capabilities" className="w-full border-t border-border pt-10 mt-4 scroll-mt-24">
+        <section id="capabilities" className="w-full border-border pt-10 mt-4 scroll-mt-24">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="rounded-2xl border border-border bg-white p-5 shadow-sm">
               <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-lg border border-accent/20 bg-accent/10 text-accent">
