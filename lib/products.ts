@@ -8,6 +8,7 @@
 
 export type Product = {
   slug: string;
+  instagramUrl: string;
   name: string;
   tag: string;
   tagline: string;
@@ -27,6 +28,7 @@ export type Product = {
 export const PRODUCTS: Product[] = [
   {
     slug: "website-inquiry-form",
+    instagramUrl: "https://www.instagram.com/agentix.system/?product=website-inquiry-form",
     name: "Website Inquiry Form Agent",
     tag: "Lead Gen",
     tagline: "Logs every website inquiry, alerts your team, and confirms with the client automatically.",
@@ -61,6 +63,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "contact-us-form-agent",
+    instagramUrl: "https://www.instagram.com/agentix.system/?product=contact-us-form-agent",
     name: "Contact Us Form Agent",
     tag: "Lead Gen",
     tagline: "Automate your Contact Us form: store, notify, and confirm, all in one flow.",
@@ -92,6 +95,7 @@ export const PRODUCTS: Product[] = [
 
   {
     slug: "ai-website-assistant-chatbot",
+    instagramUrl: "https://www.instagram.com/agentix.system/?product=ai-website-assistant-chatbot",
     name: "AI Website Assistant",
     tag: "Support",
     tagline: "A RAG-powered chatbot that talks like a real team member, not a script.",
@@ -126,6 +130,7 @@ export const PRODUCTS: Product[] = [
 
   {
     slug: "hospitality-booking-concierge-agent",
+    instagramUrl: "https://www.instagram.com/agentix.system/?product=hospitality-booking-concierge-agent",
     name: "Hospitality Booking Concierge",
     tag: "Hospitality",
     tagline: "A WhatsApp AI concierge that handles bookings, changes, and guest queries end-to-end.",

@@ -85,11 +85,29 @@ export default function ProductPage({ params }: Props) {
         Back to all agents
       </Link>
 
-      <span className="text-accent2 text-[0.78rem] font-semibold tracking-wide uppercase block mb-3.5">
-        {product.tag}
-      </span>
-      <h1 className="font-display text-[clamp(1.9rem,3.4vw,2.6rem)] mb-4">{product.name}</h1>
-      <p className="text-textDim text-[1.05rem] max-w-[640px] mb-10">{product.lead}</p>
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6 mb-10">
+        <div>
+          <span className="text-accent2 text-[0.78rem] font-semibold tracking-wide uppercase block mb-3.5">
+            {product.tag}
+          </span>
+          <h1 className="font-display text-[clamp(1.9rem,3.4vw,2.6rem)] mb-4">{product.name}</h1>
+          <p className="text-textDim text-[1.05rem] max-w-[640px]">{product.lead}</p>
+        </div>
+        <a
+          href={product.instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Watch us on Instagram"
+          className="inline-flex items-center justify-center gap-2 self-start shrink-0 bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#8134af] text-white font-semibold text-sm px-4 py-3 rounded-xl shadow-sm hover:opacity-90 transition"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          Watch Instagram
+        </a>
+      </div>
 
       <div className="relative w-full h-[100px] md:h-[490px] rounded-[18px] border border-border overflow-hidden mb-9">
         <Image src={product.image} alt={product.imageAlt} fill sizes="100vw"  priority />
@@ -132,13 +150,6 @@ export default function ProductPage({ params }: Props) {
           
         
 
-          {/* <div className="grid grid-cols-2 gap-3 mt-7">
-            {product.gallery.map((img, i) => (
-              <div key={i} className="relative h-[130px] rounded-xl border border-border overflow-hidden">
-                <Image src={img.src} alt={img.alt} fill sizes="50vw" className="object-cover" />
-              </div>
-            ))}
-          </div> */}
         </div>
 
         <aside className="bg-surface border border-border rounded-2xl p-6 h-fit lg:sticky lg:top-24">
