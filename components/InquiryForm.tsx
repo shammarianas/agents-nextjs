@@ -53,7 +53,7 @@ const BUDGET_OPTIONS = [
 ];
 
 const WEBHOOK_URL =
-  "https://n8n-z5va.srv1917294.hstgr.cloud/webhook/agentix-system";
+  "https://n8n.agentixsystem.com/webhook/agentix-system";
 
 export default function InquiryForm() {
   const [countries, setCountries] = useState<Country[]>(FALLBACK_COUNTRIES);
