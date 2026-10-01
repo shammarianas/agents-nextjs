@@ -43,15 +43,19 @@ export function generateMetadata({ params }: Props): Metadata {
 export default function ProductPage({ params }: Props) {
   const product = getProductBySlug(params.slug);
   if (!product) notFound();
+  const url = `${SITE.url}/agents/${product.slug}`;
 
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${url}#product`,
     name: product.name,
+    url,
     description: product.metaDescription,
-    image: product.image,
+    image: `${SITE.url}${product.image}`,
     brand: { "@type": "Brand", name: SITE.name },
     category: product.tag,
+    manufacturer: { "@id": `${SITE.url}/#organization` },
   };
 
   const breadcrumbJsonLd = {
@@ -59,7 +63,7 @@ export default function ProductPage({ params }: Props) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
-      { "@type": "ListItem", position: 2, name: "Agents", item: `${SITE.url}/#products` },
+      { "@type": "ListItem", position: 2, name: "Products", item: `${SITE.url}/products` },
       { "@type": "ListItem", position: 3, name: product.name, item: `${SITE.url}/agents/${product.slug}` },
     ],
   };

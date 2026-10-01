@@ -9,7 +9,7 @@ import { PRODUCTS } from "@/lib/products";
 import { SITE } from "@/lib/config";
 import { FAQS } from "@/lib/homeContent";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: `AI Automation Agents for Sales, Support & Operations | ${SITE.name}`,
   description: SITE.description,
   alternates: { canonical: "/" },
@@ -20,8 +20,31 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     type: "website",
+    images: [
+      {
+        url: "/assets/Logo.png",
+        width: 1921,
+        height: 520,
+        alt: `${SITE.name} — AI Automation Agents`,
+      },
+    ],
   },
 };
+
+export function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { q?: string };
+}): Metadata {
+  const hasSearchQuery = Boolean(searchParams.q?.trim());
+
+  return {
+    ...baseMetadata,
+    robots: hasSearchQuery
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
+  };
+}
 
 const faqJsonLd = {
   "@context": "https://schema.org",

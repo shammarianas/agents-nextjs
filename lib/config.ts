@@ -11,6 +11,12 @@ export const SITE = {
   phone: "+971 52 803 6012",
   email: "info@agentixsystem.com",
   address: "Dubai, United Arab Emirates",
+  logo: "/assets/Logo.png",
+  socialLinks: [
+    "https://www.instagram.com/agentix.system/",
+    "https://www.facebook.com/agentix.system/",
+    "https://www.youtube.com/@agentixsystem",
+  ],
   twitterHandle: "@agentixsystem",
   keywords: [
     "AI automation agents",

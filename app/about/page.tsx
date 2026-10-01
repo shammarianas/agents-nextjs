@@ -41,9 +41,24 @@ const VALUES = [
   },
 ];
 
+const aboutPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${SITE.url}/about#webpage`,
+  url: `${SITE.url}/about`,
+  name: `About ${SITE.name}`,
+  description: `${SITE.name} has helped businesses turn repetitive tasks into intelligent AI workflows.`,
+  isPartOf: { "@id": `${SITE.url}/#website` },
+  about: { "@id": `${SITE.url}/#organization` },
+};
+
 export default function AboutPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd) }}
+      />
       <section className="pt-20 pb-16">
         <div className="wrap grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
           <Reveal>

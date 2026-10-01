@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "how Agentix uses your data",
   ],
   alternates: { canonical: "/policy" },
+  robots: { index: false, follow: true },
 };
 
 export default function PolicyPage() {

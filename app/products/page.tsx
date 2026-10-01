@@ -4,10 +4,46 @@ import ProductGrid from "@/components/ProductGrid";
 import { PRODUCTS } from "@/lib/products";
 import { SITE } from "@/lib/config";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   title: "Products",
   description: `Browse every ready-made AI automation agent ${SITE.name} offers, for sales, support, operations, and marketing.`,
   alternates: { canonical: "/products" },
+};
+
+export function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { q?: string; page?: string };
+}): Metadata {
+  const hasQueryParams = Boolean(searchParams.q?.trim() || searchParams.page);
+
+  return {
+    ...baseMetadata,
+    robots: hasQueryParams
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
+  };
+}
+
+const productsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${SITE.name} AI automation agents`,
+  description: `Ready-made AI automation agents from ${SITE.name} for sales, support, operations, and marketing.`,
+  numberOfItems: PRODUCTS.length,
+  itemListElement: PRODUCTS.map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Product",
+      name: product.name,
+      url: `${SITE.url}/agents/${product.slug}`,
+      image: `${SITE.url}${product.image}`,
+      description: product.metaDescription,
+      brand: { "@type": "Brand", name: SITE.name },
+      category: product.tag,
+    },
+  })),
 };
 
 export default function ProductsPage({
@@ -46,6 +82,10 @@ export default function ProductsPage({
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productsJsonLd) }}
+      />
       <section className="pt-20 pb-10">
         <div className="wrap">
           <Reveal>
