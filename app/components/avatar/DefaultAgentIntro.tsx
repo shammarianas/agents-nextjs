@@ -252,27 +252,32 @@ export const DefaultAgentIntro: React.FC<DefaultAgentIntroProps> = ({
         </div>
 
         {/* Quick Start Conversation CTA */}
-        <div className="flex flex-wrap items-center gap-3 w-full justify-center md:justify-start">
-          <Button
-            variant="neon"
-            size="md"
-            onClick={onStartConversation}
-            isLoading={isLoading}
-            rightIcon={<ArrowRight className="w-4 h-4" />}
-            className="uppercase tracking-wider shadow-neon-cyan"
-          >
-            Start Live Conversation
-          </Button>
+        <div className="w-full space-y-3">
+          <div className="text-xl sm:text-2xl font-bold text-ink tracking-tight text-center md:text-left">
+            Are you ready to join?
+          </div>
+          <div className="flex flex-wrap items-center gap-3 justify-center md:justify-start">
+            <Button
+              variant="neon"
+              size="md"
+              onClick={onStartConversation}
+              isLoading={isLoading}
+              rightIcon={<ArrowRight className="w-4 h-4" />}
+              className="uppercase tracking-wider shadow-neon-cyan"
+            >
+              Join
+            </Button>
 
-          <Button
-            variant="outline"
-            size="md"
-            onClick={replayIntro}
-            leftIcon={<RotateCcw className="w-3.5 h-3.5" />}
-            className="text-xs"
-          >
-            Replay Intro
-          </Button>
+            <Button
+              variant="outline"
+              size="md"
+              onClick={replayIntro}
+              leftIcon={<RotateCcw className="w-3.5 h-3.5" />}
+              className="text-xs"
+            >
+              Replay Intro
+            </Button>
+          </div>
         </div>
       </div>
     </div>
