@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/Logo.png",
-        width: 1200,
-        height: 630,
+        width: 1921,
+        height: 520,
         alt: `${SITE.name} — AI Automation Agents`,
       },
     ],
@@ -59,11 +59,50 @@ export default function RootLayout({
 }) {
   const organizationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: SITE.name,
-    url: SITE.url,
-    description: SITE.description,
-    sameAs: [SITE.whatsapp],
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": `${SITE.url}/#organization`,
+        name: SITE.name,
+        url: SITE.url,
+        logo: `${SITE.url}${SITE.logo}`,
+        image: `${SITE.url}${SITE.logo}`,
+        description: SITE.description,
+        telephone: SITE.phone,
+        email: SITE.email,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Dubai",
+          addressCountry: "AE",
+        },
+        areaServed: [
+          { "@type": "City", name: "Dubai" },
+          { "@type": "Country", name: "United Arab Emirates" },
+        ],
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: SITE.phone,
+          email: SITE.email,
+          contactType: "customer service",
+          areaServed: "AE",
+          availableLanguage: ["English"],
+        },
+        sameAs: SITE.socialLinks,
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${SITE.url}/#website`,
+        url: SITE.url,
+        name: SITE.name,
+        description: SITE.description,
+        publisher: { "@id": `${SITE.url}/#organization` },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${SITE.url}/?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
   };
 
   return (

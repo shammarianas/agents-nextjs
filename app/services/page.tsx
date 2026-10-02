@@ -43,14 +43,27 @@ const PROCESS = [
 const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": `${SITE.url}/services#service`,
   name: `${SITE.name} AI automation services`,
+  url: `${SITE.url}/services`,
   serviceType: "AI workflow automation",
   provider: {
-    "@type": "Organization",
+    "@type": "ProfessionalService",
+    "@id": `${SITE.url}/#organization`,
     name: SITE.name,
     url: SITE.url,
+    telephone: SITE.phone,
+    email: SITE.email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Dubai",
+      addressCountry: "AE",
+    },
   },
-  areaServed: "Worldwide",
+  areaServed: [
+    { "@type": "City", name: "Dubai" },
+    { "@type": "Country", name: "United Arab Emirates" },
+  ],
   description: `${SITE.name} designs, builds, and maintains AI automation agents for sales, support, operations, and marketing teams.`,
 };
 
