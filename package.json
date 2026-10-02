@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env NEXT_DIST_DIR=.next-dev next dev",
-    "build": "cross-env NEXT_DIST_DIR=.next-production next build",
-    "start": "cross-env NEXT_DIST_DIR=.next-production next start",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
