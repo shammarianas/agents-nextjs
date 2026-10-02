@@ -48,7 +48,7 @@ export const DemoControls: React.FC<DemoControlsProps> = ({
     conversationState === 'initializing' || conversationState === 'requesting-permissions';
 
   return (
-    <div className="w-full space-y-4 pt-14">
+    <div className="w-full space-y-4 ">
       {/* Session Controls bar */}
       <div className="card-glow rounded-2xl p-5 flex flex-wrap items-center justify-between gap-4">
         <div>
@@ -92,7 +92,7 @@ export const DemoControls: React.FC<DemoControlsProps> = ({
         </div>
       </div>
 
-      <div className="agent-images" aria-label="Available AI agents">
+      <div className="agent-images pt-14" aria-label="Available AI agents">
         <div className="agent-images__track">
           {[...agentImages, ...agentImages].map((image, index) => (
             <img
