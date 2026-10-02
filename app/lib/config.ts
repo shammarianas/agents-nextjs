@@ -36,8 +36,8 @@ Keep responses friendly, professional, and brief unless asked for detail.`;
 // override these when present. NOTE: these values live in the repository — keep
 // the repo private, since anyone with repo access can use this Tavus account.
 const DEFAULTS = {
-  apiKey: '7a6754011b8d4e94b284387a3d76d9d3',
-  personaId: 'p77216e8d93c',
+  apiKey: '8ce34f1569c4440bb22690b9a060c8f3',
+  personaId: 'p694bb932eff',
   replicaId: 'r3f427f43c9d',
   documentIds: '',
   retrievalStrategy: 'balanced',
