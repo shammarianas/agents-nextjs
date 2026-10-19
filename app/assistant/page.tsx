@@ -7,6 +7,30 @@ import { DemoControls } from '../components/DemoControls';
 import { CameraPermissionModal } from '../components/camera/CameraPermission';
 import { ConversationState, ConfigStatusResponse, CameraStatus } from '../types';
 import { Clock3, Database, Mic2, UserRound } from 'lucide-react';
+import { FAQS } from '@/lib/homeContent';
+import { SITE } from '@/lib/config';
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+    { '@type': 'ListItem', position: 2, name: 'AI Assistant', item: `${SITE.url}/assistant` },
+  ],
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+};
 
 export default function AssistantPage() {
   const [conversationState, setConversationState] = useState<ConversationState>('idle');
@@ -200,6 +224,14 @@ export default function AssistantPage() {
     // wraps every page with its own Header/Footer. This page only renders
     // the assistant section itself.
     <section className="relative w-full pt-10 sm:pt-14 pb-[7rem]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-6">
         {/* Simple page intro — shown only before/after a call, not during */}
         {!isCallActive && conversationState !== 'error' && (
@@ -312,6 +344,23 @@ export default function AssistantPage() {
                 Always online, always ready, no breaks, no hold music, and no missed queries.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section id="faq" className="w-full max-w-3xl pt-10 mt-4 scroll-mt-24">
+          <div className="mb-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-accent2">FAQ</p>
+            <h2 className="mt-2 font-display text-2xl font-bold text-text sm:text-3xl">
+              Questions about AI automation
+            </h2>
+          </div>
+          <div className="space-y-4">
+            {FAQS.map((item) => (
+              <article key={item.q} className="rounded-2xl border border-border bg-white p-5 shadow-sm">
+                <h3 className="text-base font-bold text-text">{item.q}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-textDim">{item.a}</p>
+              </article>
+            ))}
           </div>
         </section>
       </div>

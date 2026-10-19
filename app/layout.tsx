@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: SITE.description,
     images: [
       {
-        url: "/assets/Logo.png",
+        url: `${SITE.url}${SITE.logo}`,
         width: 1921,
         height: 520,
         alt: `${SITE.name} — AI Automation Agents`,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE.name} — AI Automation Agents`,
     description: SITE.description,
-    images: ["/assets/Logo.png"],
+    images: [`${SITE.url}${SITE.logo}`],
   },
   robots: {
     index: true,
@@ -73,8 +73,10 @@ export default function RootLayout({
         address: {
           "@type": "PostalAddress",
           addressLocality: "Dubai",
+          addressRegion: "Dubai",
           addressCountry: "AE",
         },
+        hasMap: "https://maps.google.com/?q=Dubai+United+Arab+Emirates",
         areaServed: [
           { "@type": "City", name: "Dubai" },
           { "@type": "Country", name: "United Arab Emirates" },
